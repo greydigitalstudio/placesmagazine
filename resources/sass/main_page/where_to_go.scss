@@ -1,0 +1,93 @@
+.where_to_go {
+    &__in {
+        padding-top: 45px;
+    }
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 28px;
+    }
+    &__title {
+        max-width: 897px;
+    }
+    &__weekdays {
+        position: relative;
+        &--list {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 14px;
+            padding: 0 0 20px 0;
+            margin: 0;
+            position: sticky;
+            top: 200px;
+            li {
+                color: #858585;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 130%; /* 15.6px */
+                &.isActive {
+                    color: #121212;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        .event_card__image_in {
+            padding-top: 60%;
+        }
+        @for $index from 1 through 50 {
+            .event_card:nth-of-type(#{$index}) {
+              order: #{$index};
+            }
+        }
+        .event_card {
+            margin: 0 -1px -1px 0;
+            &:first-of-type {
+                background: #EBE9F2;
+                grid-column-start: 1;
+                grid-column-end: 3;
+                .event_card__image_in {
+                    padding-top: 40%;
+                }
+                .event_card__name {
+                    font-size: 26px;
+                    font-style: normal;
+                    font-weight: 700;
+                }
+            }
+        }
+        
+    }
+    &__subscribe {
+        position: relative;
+        order: 3;
+        padding: 0 31px;
+        &--third {
+            order: 3;
+        }
+        &--1-from-4 {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            padding: 49px 0;
+        }
+        &--2-from-4 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            padding: 49px 28px;
+        }
+        &--3-from-4 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            padding: 49px 28px;
+        }
+        .subscription {
+            position: sticky;
+            top: 200px;
+        }
+    }
+}

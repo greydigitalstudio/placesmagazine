@@ -1,0 +1,31 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 21px 35px;
+    &__menu ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 30px;
+        margin: 0;
+        padding: 0;
+        a {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            text-decoration: none;
+            color: #999;
+        }
+        li.isActive a {
+            color: #121212;
+            font-weight: 600;
+        }
+    }
+    &__icons {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+}

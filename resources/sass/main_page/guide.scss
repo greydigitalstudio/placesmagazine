@@ -1,0 +1,39 @@
+.guide {
+    &__in {
+        padding-top: 72px;
+        padding-right: 0;
+    }
+    &__top {
+        width: 100%;
+        max-width: 897px;
+        margin-bottom: 31px;
+    }
+    &__bottom {
+        display: flex;
+    }
+    &__left {
+        width: 259px;
+        margin-right: 49px;
+        p {
+            margin: 0;
+            color: #121212;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            &:not(:last-of-type) {
+                margin-bottom: 24px;
+            }
+        }
+    }
+    &__left-in {
+        position: sticky;
+        top: 200px;
+    }
+    &__right {
+        width: calc(100% - 259px - 49px);
+    }
+    &__button { 
+        margin-top: 56px;
+    }
+}

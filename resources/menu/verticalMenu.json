@@ -1,0 +1,40 @@
+{
+  "menu": [
+    {
+      "name": "Пользователи",
+      "icon": "menu-icon tf-icons ti ti-users",
+      "slug": "admin/users",
+      "submenu": [
+        {
+          "url": "admin/users/management",
+          "name": "Список",
+          "slug": "management"
+        }
+      ]
+    },
+    {
+      "name": "События",
+      "icon": "menu-icon tf-icons ti ti-calendar",
+      "slug": "admin/events",
+      "submenu": [
+        {
+          "url": "admin/events",
+          "name": "Список",
+          "slug": "events"
+        }
+      ]
+    },
+    {
+      "name": "Теги",
+      "icon": "menu-icon tf-icons ti ti-bookmark",
+      "slug": "admin/eventagsts",
+      "submenu": [
+        {
+          "url": "admin/tags",
+          "name": "Список",
+          "slug": "tags"
+        }
+      ]
+    }
+  ]
+}

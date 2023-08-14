@@ -1,0 +1,16 @@
+.companies {
+    overflow: hidden;
+    user-select: none;
+    &__in {
+        padding-top: 53px;
+    }
+    &__top {
+        margin-bottom: 36px;
+    }
+    &__slide {
+        font-size: 0;
+    }
+    .glide__track {
+        overflow: visible;
+    }
+}

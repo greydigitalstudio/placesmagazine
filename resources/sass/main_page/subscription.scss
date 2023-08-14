@@ -1,0 +1,26 @@
+.subscription {
+    &__title {
+        color: #121212;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%; /* 33.8px */
+        text-transform: uppercase;
+        margin-bottom: 8px;
+    }
+    &__subtitle {
+        color: #121212;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%; /* 15.6px */
+        margin-bottom: 18px;
+    }
+    &__input {
+        width: 100%;
+        max-width: 250px;
+    }
+    &__button {
+        margin-top: 18px;
+    }
+}
