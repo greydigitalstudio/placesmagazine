@@ -1,8 +1,13 @@
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 21px 35px;
+    padding: 0 35px;
+    &__in {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #D6D6D6;
+        padding: 21px 0;
+        margin-bottom: -1px;
+    }
     &__menu ul {
         display: flex;
         align-items: center;

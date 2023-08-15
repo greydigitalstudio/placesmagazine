@@ -198,8 +198,13 @@ class EventController extends Controller
      * @param  \App\Models\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Event $event)
+    public function destroy($id)
     {
-        dd($event);
+        $event = Event::where('id', $id)->firstOrFail();
+        $event->tags()->sync([]);
+        $event->categories()->sync([]);
+        $event->delete();
+
+        return redirect()->back();
     }
 }

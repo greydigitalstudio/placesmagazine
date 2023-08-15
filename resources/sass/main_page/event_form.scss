@@ -1,0 +1,37 @@
+.event_form {
+    &__wrap {
+        display: flex;
+        align-items: center;
+        background: #EBE9F2;
+        padding: 44px 50px;
+    }
+    &__left {
+        font-size: 0;
+        width: 536px;
+    }
+    &__right {
+        width: calc(100% - 536px - 75px);
+        margin-left: 75px;
+        padding: 0 25px;
+
+    }
+    &__title {
+        color: #121212;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%; /* 38.4px */
+        text-transform: uppercase;
+        margin-bottom: 18px;
+    }
+    &__subtitle {
+        color: #121212;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%; /* 15.6px */
+    }
+    &__button {
+        margin-top: 30px;
+    }
+}

@@ -7,4 +7,15 @@
         justify-content: space-between;
         margin-bottom: 28px; 
     }
+    &__title {
+        position: relative;
+        .heart {
+            display: inline-block;
+            vertical-align: top;
+            width: 22px;
+            font-size: 0;
+            line-height: 22px;
+            margin-left: 27px;
+        }
+    }
 }

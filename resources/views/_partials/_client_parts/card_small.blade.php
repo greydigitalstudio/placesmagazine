@@ -13,10 +13,10 @@
                     <img src="{{ asset('storage/uploads/') . '/' . $event->main_photo }}" alt="{{ $event->name }}">
                 </div>
             </div>
-            <a href="#" class="event_card__name">{{ $event->name }}</a>
+            <a href="{{ route('client-event-single', ['id' => $event->id]) }}" class="event_card__name">{{ $event->name }}</a>
             <div class="event_card__description">{{ $event->description }}</div>
             <div class="event_card__time">
-                <strong>{{ date('j F', strtotime($event->event_datetime)) }}</strong> <span>c {{ date('H:i', strtotime($event->event_datetime)) }} до {{ date('H:i', strtotime($event->event_datetime)) }}</span>
+                <strong>{{ date('j F', strtotime($event->event_datetime)) }}</strong> <span>c {{ date('H:i', strtotime($event->event_datetime)) }} до {{ date('H:i', strtotime($event->endtime)) }}</span>
             </div>
         </div>
         <div class="event_card__bottom">

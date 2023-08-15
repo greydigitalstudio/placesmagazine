@@ -25,9 +25,29 @@
           <a href="{{ route('admin-events-edit', $event->id) }}" class="btn btn-icon btn-primary waves-effect me-2">
             <span class="ti ti-edit"></span>
           </a>
-          <a href="javascript:void(0);" class="btn btn-icon btn-danger waves-effect">
+          <button data-bs-toggle="modal" data-bs-target="#modalDeleteEvent{{ $event->id }}" class="btn btn-icon btn-danger waves-effect">
             <span class="ti ti-trash"></span>
-          </a>
+          </button>
+          <div class="modal fade" id="modalDeleteEvent{{ $event->id }}" tabindex="-1" aria-labelledby="modalDeleteEvent{{ $event->id }}Label" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                  <form class="modal-content" method="POST" action="{{ route('admin-events-destroy', $event->id) }}">
+                      @csrf
+                      <input type="hidden" name="_method" value="DELETE">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="modalDeleteEvent{{ $event->id }}Label">Удаление события "{{ $event->name }}"</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                          </button>
+                      </div>
+                      <div class="modal-body">
+                          <p>Вы уверены что хотите удалить событие "{{ $event->name }}" ?</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Нет</button>
+                          <button type="submit" class="btn btn-primary">Да</button>
+                      </div>
+                  </form>
+              </div>
+          </div>
         </div>
       </div>
     </div>

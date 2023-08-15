@@ -21,11 +21,18 @@ use App\Http\Controllers\CategoryController;
 */
 
 Route::get('/', [ClientController::class, 'index'])->name('client-index');
+
 Route::get('/events', [ClientController::class, 'events'])->name('client-events');
+Route::get('/events/{id}', [ClientController::class, 'event_single'])->name('client-event-single');
+
+
+
 Route::get('/journal', [ClientController::class, 'journal'])->name('client-journal');
 
 Route::get('/search', [ClientController::class, 'search'])->name('client-search');
 Route::get('/favorites', [ClientController::class, 'favorites'])->name('client-favorites');
+
+
 
 Auth::routes();
 
@@ -49,7 +56,8 @@ Route::group([
   Route::get('/admin/events', [EventController::class, 'index'])->name('admin-events');
   Route::get('/admin/events/create', [EventController::class, 'create'])->name('admin-events-create');
   Route::get('/admin/events/{id}', [EventController::class, 'edit'])->name('admin-events-edit');
-  Route::post('/admin/events/{id}', [EventController::class, 'update'])->name('admin-events-update');
+  Route::put('/admin/events/{id}', [EventController::class, 'update'])->name('admin-events-update');
+  Route::delete('/admin/events/{id}', [EventController::class, 'destroy'])->name('admin-events-destroy');
 
 
 

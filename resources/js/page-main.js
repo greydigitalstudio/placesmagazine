@@ -35,3 +35,14 @@ if (document.querySelector('.saves__slider')) {
     gap: 0,
   }).mount()
 }
+
+
+if (document.querySelector('.reviews__items')) {
+  var reviews__items = new Glide('.reviews__items', {
+    type: 'slider',
+    startAt: 0,
+    perView: 4,
+    bound: true,
+    gap: 0,
+  }).mount()
+}

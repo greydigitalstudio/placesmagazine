@@ -21,12 +21,26 @@ class ClientController extends Controller
 
     public function events()
     {
-        $events = Event::all();
+        if (isset($_GET['category_id'])) {
+            $category = Category::where('id', $_GET['category_id'])->first();
+            $events = $category->events;
+        } else {
+            $events = Event::all();
+        }
         $tags = Tag::all();
         $categories = Category::all();
 
         return view('client.events', compact('events', 'tags', 'categories'));
     }
+    public function event_single($id)
+    {
+        $event = Event::where('id', $id)->firstOrFail();
+        $events = Event::all();
+        $tags = Tag::all();
+        $categories = Category::all();
+        return view('client.event_single', compact('event', 'events', 'tags', 'categories'));
+    }
+    
 
     public function journal()
     {

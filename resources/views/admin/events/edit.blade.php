@@ -28,6 +28,7 @@
 
     <form action="{{ route('admin-events-update', $event->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
+        <input type="hidden" name="_method" value="PUT">
         <div class="d-flex justify-content-between align-items-center mb-4 py-3">
             <h4 class="fw-bold mb-0"><span class="text-muted fw-light">События /</span> Новое</h4>
             <button type="submit" class="btn btn-success add-new"><span><i class="ti ti-device-floppy me-0 me-sm-1"></i><span
