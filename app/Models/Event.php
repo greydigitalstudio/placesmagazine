@@ -15,6 +15,20 @@ class Event extends Model
         'description',
         'content',
         'recomended',
+        'main_photo',
+        'popular',
+        'event_datetime',
+        'endtime',
+        'occasion',
+        'min_guests',
+        'max_guests',
+        'transfer',
+        'place',
+        'checked',
+        'pg',
+        'address',
+        'organizer_logo',
+        'organizer_name',
     ];
 
 
@@ -22,5 +36,10 @@ class Event extends Model
     public function tags()
     {
         return $this->belongsToMany(Tag::class, 'tag_event');
+    }
+
+    public function categories()
+    {
+        return $this->belongsToMany(Category::class, 'category_event');
     }
 }

@@ -1,8 +1,10 @@
 <section class="main_event">
     <div class="main_event__in center">
-        <div class="main_event__top">
-            <h1 class="main_event__title general__title">{{ $title }}</h1>
-        </div>
+        @if (isset($title))
+            <div class="main_event__top">
+                <h1 class="main_event__title general__title">{{ $title }}</h1>
+            </div>
+        @endif
         <div class="main_event__item">
             <div class="main_event__left">
                 <div class="main_event__event">

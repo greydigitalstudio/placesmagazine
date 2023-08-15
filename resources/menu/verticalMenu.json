@@ -35,6 +35,18 @@
           "slug": "tags"
         }
       ]
+    },
+    {
+      "name": "Категории",
+      "icon": "menu-icon tf-icons ti ti-folder",
+      "slug": "admin/categories",
+      "submenu": [
+        {
+          "url": "admin/categories",
+          "name": "Список",
+          "slug": "categories"
+        }
+      ]
     }
   ]
 }

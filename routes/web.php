@@ -6,6 +6,7 @@ use App\Http\Controllers\laravel_example\UserManagement;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\TagController;
+use App\Http\Controllers\CategoryController;
 
 
 /*
@@ -56,6 +57,13 @@ Route::group([
   Route::post('/admin/tags', [TagController::class, 'store'])->name('admin-tags-store');
   Route::put('/admin/tags/{id}', [TagController::class, 'update'])->name('admin-tags-update');
   Route::delete('/admin/tags/{id}', [TagController::class, 'destroy'])->name('admin-tags-destroy');
+
+
+
+  Route::get('/admin/categories', [CategoryController::class, 'index'])->name('admin-categories');
+  Route::post('/admin/categories', [CategoryController::class, 'store'])->name('admin-category-store');
+  Route::put('/admin/categories/{id}', [CategoryController::class, 'update'])->name('admin-category-update');
+  Route::delete('/admin/categories/{id}', [CategoryController::class, 'destroy'])->name('admin-category-destroy');
 
 
 

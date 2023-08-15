@@ -12,6 +12,7 @@
     @include('_partials._client_parts.where_to_go', ['title' => 'Куда сходить на этой неделе?', 'cards' => $events])
     @include('_partials._client_parts.companies_slider', ['title' => 'в каталоге 158 активных событий известных компаний'])
     @include('_partials._client_parts.main_event', ['title' => 'Главное событие недели', 'event' => $events[0]])
+    @include('_partials._client_parts.saves', ['title' => 'Сохраненки редакции', 'cards' => $events])
     <div>
         {{ $events }}
     </div>

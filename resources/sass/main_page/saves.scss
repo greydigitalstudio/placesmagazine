@@ -1,0 +1,10 @@
+.saves {
+    padding: 68px 0;
+    background: #F6F6F6;
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 28px; 
+    }
+}
