@@ -7,6 +7,7 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\OrganizerController;
 
 
 /*
@@ -72,6 +73,12 @@ Route::group([
   Route::post('/admin/categories', [CategoryController::class, 'store'])->name('admin-category-store');
   Route::put('/admin/categories/{id}', [CategoryController::class, 'update'])->name('admin-category-update');
   Route::delete('/admin/categories/{id}', [CategoryController::class, 'destroy'])->name('admin-category-destroy');
+
+
+  Route::get('/admin/organizers', [OrganizerController::class, 'index'])->name('admin-organizers');
+  Route::post('/admin/organizers', [OrganizerController::class, 'store'])->name('admin-organizer-store');
+  Route::put('/admin/organizers/{id}', [OrganizerController::class, 'update'])->name('admin-organizer-update');
+  Route::delete('/admin/organizers/{id}', [OrganizerController::class, 'destroy'])->name('admin-organizer-destroy');
 
 
 

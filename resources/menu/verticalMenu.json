@@ -47,6 +47,18 @@
           "slug": "categories"
         }
       ]
+    },
+    {
+      "name": "Организаторы",
+      "icon": "menu-icon tf-icons ti ti-user",
+      "slug": "admin/organizers",
+      "submenu": [
+        {
+          "url": "admin/organizers",
+          "name": "Список",
+          "slug": "organizers"
+        }
+      ]
     }
   ]
 }
