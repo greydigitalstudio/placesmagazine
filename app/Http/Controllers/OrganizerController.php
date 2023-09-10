@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Organizer;
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Storage;
+
 class OrganizerController extends Controller
 {
     /**
@@ -36,7 +38,22 @@ class OrganizerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required|unique:organizers|max:255',
+            'main_logo' => 'required|mimes:jpg,png,webp',
+        ]);
+
+        $image = $request->file('main_logo');
+        $fileName = rand() . '.' . $image->getClientOriginalExtension();
+        $file = Storage::disk('public')->putFileAs('uploads', $image, $fileName);
+
+
+        $organizer = new Organizer($request->all());
+        $organizer->main_logo = $fileName;
+
+        $organizer->save();
+
+        return redirect()->back();
     }
 
     /**
@@ -68,9 +85,25 @@ class OrganizerController extends Controller
      * @param  \App\Models\Organizer  $organizer
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Organizer $organizer)
+    public function update(Request $request, $id)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required|unique:organizers|max:255',
+        ]);
+
+        $organizer = Organizer::where('id', $id)->firstOrFail();
+        
+        if (!empty($request->main_logo)) {
+            $fileName = rand() . '.' . $image->getClientOriginalExtension();
+            $file = Storage::disk('public')->putFileAs('uploads', $image, $fileName);
+            $organizer->main_logo = $fileName;
+        }
+
+        $organizer->name = $request['name'];
+
+        $organizer->save();
+
+        return redirect()->back();
     }
 
     /**
@@ -79,8 +112,12 @@ class OrganizerController extends Controller
      * @param  \App\Models\Organizer  $organizer
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Organizer $organizer)
+    public function destroy($id)
     {
-        //
+        $organizer = Organizer::where('id', $id)->firstOrFail();
+
+        $organizer->delete();
+
+        return redirect()->back();
     }
 }

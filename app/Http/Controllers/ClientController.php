@@ -51,6 +51,15 @@ class ClientController extends Controller
         return view('client.journal', compact('events', 'tags', 'categories'));
     }
 
+    public function journal_single($id)
+    {
+        // $event = Event::where('id', $id)->firstOrFail();
+        $events = Event::all();
+        $tags = Tag::all();
+        $categories = Category::all();
+        return view('client.journal_single', compact('events', 'tags', 'categories'));
+    }
+
     public function search()
     {
         $events = Event::all();

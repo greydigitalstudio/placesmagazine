@@ -8,6 +8,7 @@ use App\Http\Controllers\ClientController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\OrganizerController;
+use App\Http\Controllers\JournalController;
 
 
 /*
@@ -29,6 +30,7 @@ Route::get('/events/{id}', [ClientController::class, 'event_single'])->name('cli
 
 
 Route::get('/journal', [ClientController::class, 'journal'])->name('client-journal');
+Route::get('/journal/{id}', [ClientController::class, 'journal_single'])->name('client-journal-single');
 
 Route::get('/search', [ClientController::class, 'search'])->name('client-search');
 Route::get('/favorites', [ClientController::class, 'favorites'])->name('client-favorites');
@@ -83,7 +85,12 @@ Route::group([
 
 
 
-
+  Route::post('/admin/journals/store', [JournalController::class, 'store'])->name('admin-journals-store');
+  Route::get('/admin/journals', [JournalController::class, 'index'])->name('admin-journals');
+  Route::get('/admin/journals/create', [JournalController::class, 'create'])->name('admin-journals-create');
+  Route::get('/admin/journals/{id}', [JournalController::class, 'edit'])->name('admin-journals-edit');
+  Route::put('/admin/journals/{id}', [JournalController::class, 'update'])->name('admin-journals-update');
+  Route::delete('/admin/journals/{id}', [JournalController::class, 'destroy'])->name('admin-journals-destroy');
 
 
 

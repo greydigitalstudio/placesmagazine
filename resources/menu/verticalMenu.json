@@ -59,6 +59,42 @@
           "slug": "organizers"
         }
       ]
+    },
+    {
+      "name": "Журнал",
+      "icon": "menu-icon tf-icons ti ti-book",
+      "slug": "admin/journals",
+      "submenu": [
+        {
+          "url": "admin/journals",
+          "name": "Список",
+          "slug": "journals"
+        }
+      ]
+    },
+    {
+      "name": "Отзывы",
+      "icon": "menu-icon tf-icons ti ti-pencil",
+      "slug": "admin/",
+      "submenu": [
+        {
+          "url": "admin/",
+          "name": "Список",
+          "slug": "reviews"
+        }
+      ]
+    },
+    {
+      "name": "Заявки",
+      "icon": "menu-icon tf-icons ti ti-table",
+      "slug": "admin/",
+      "submenu": [
+        {
+          "url": "admin/",
+          "name": "Список",
+          "slug": "new"
+        }
+      ]
     }
   ]
 }
