@@ -22,7 +22,7 @@
                             @endforelse
                         </div>
                     </div>
-                    <a href="#" class="main_event__event-middle">{{ $event->name }}</a>
+                    <a href="{{ route('client-event-single', ['id' => $event->id]) }}" class="main_event__event-middle">{{ $event->name }}</a>
                     <div class="main_event__event-bottom">
                         <div class="main_event__time">
                             <strong>{{ date('j F', strtotime($event->event_datetime)) }}</strong> <span>c {{ date('H:i', strtotime($event->event_datetime)) }} до {{ date('H:i', strtotime($event->event_datetime)) }}</span>
