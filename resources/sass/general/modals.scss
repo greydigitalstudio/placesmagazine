@@ -1,0 +1,94 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(20, 20, 20, 0.40);
+    &__in {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background: #fff;
+        padding: 70px 80px;
+        width: 55.8vw;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__closer {
+        position: absolute;
+        top: 28px;
+        right: calc(100% + 28px);
+        cursor: pointer;
+        // opacity: 0;
+        transform: translateX(-28px);
+    }
+    &__title {
+        color: #121212;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%; /* 57.6px */
+        text-transform: uppercase;
+        margin-bottom: 36px;
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 50px;
+    }
+    &__bottom-nocity {
+        color: #3E759C;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    &__bottom-buttons {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
+    &__button {
+        cursor: pointer;
+    }
+    &__cities-list {
+        width: max(50%, 250px);
+    }
+    &__cities-list-title,
+    &__cities-list-item {
+        color: #999;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%; /* 18.2px */
+    }
+    &__cities-list-title {
+        padding-bottom: 22px;
+        border-bottom: 1px solid #D6D6D6;
+        margin-bottom: 12px;
+    }
+    &__cities-list-items {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    &__cities-list-item {
+        padding: 12px 0;
+        cursor: pointer;
+        &:hover,
+        &--selected {
+            color: #121212;
+        }
+        &--selected {
+            font-weight: 600;
+        }
+    }
+}

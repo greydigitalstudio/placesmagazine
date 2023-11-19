@@ -181,10 +181,41 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal" data-modal="">
+      <div class="modal__in">
+        <div class="modal__closer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+            <path id="Vector" d="M10.6163 9.50002L15.6038 4.52044C15.7529 4.37137 15.8366 4.16918 15.8366 3.95836C15.8366 3.74754 15.7529 3.54535 15.6038 3.39627C15.4547 3.2472 15.2525 3.16345 15.0417 3.16345C14.8309 3.16345 14.6287 3.2472 14.4796 3.39627L9.50003 8.38378L4.52045 3.39627C4.37138 3.2472 4.16919 3.16345 3.95837 3.16345C3.74754 3.16345 3.54536 3.2472 3.39628 3.39627C3.24721 3.54535 3.16346 3.74754 3.16346 3.95836C3.16346 4.16918 3.24721 4.37137 3.39628 4.52044L8.38378 9.50002L3.39628 14.4796C3.32208 14.5532 3.26319 14.6408 3.22299 14.7372C3.1828 14.8337 3.16211 14.9372 3.16211 15.0417C3.16211 15.1462 3.1828 15.2497 3.22299 15.3461C3.26319 15.4426 3.32208 15.5302 3.39628 15.6038C3.46988 15.678 3.55744 15.7369 3.65391 15.7771C3.75038 15.8173 3.85386 15.8379 3.95837 15.8379C4.06288 15.8379 4.16635 15.8173 4.26282 15.7771C4.35929 15.7369 4.44685 15.678 4.52045 15.6038L9.50003 10.6163L14.4796 15.6038C14.5532 15.678 14.6408 15.7369 14.7372 15.7771C14.8337 15.8173 14.9372 15.8379 15.0417 15.8379C15.1462 15.8379 15.2497 15.8173 15.3462 15.7771C15.4426 15.7369 15.5302 15.678 15.6038 15.6038C15.678 15.5302 15.7369 15.4426 15.7771 15.3461C15.8173 15.2497 15.838 15.1462 15.838 15.0417C15.838 14.9372 15.8173 14.8337 15.7771 14.7372C15.7369 14.6408 15.678 14.5532 15.6038 14.4796L10.6163 9.50002Z" fill="#F6F6F6"/>
+          </svg>
+        </div>
+        <div class="modal__top">
+          <div class="modal__title">Выбор города</div>
+          <div class="modal__cities-list">
+            <div class="modal__cities-list-title">Россия</div>
+            <ul class="modal__cities-list-items">
+              <li class="modal__cities-list-item modal__cities-list-item--selected">Иркутск</li>
+              <li class="modal__cities-list-item">Москва</li>
+              <li class="modal__cities-list-item">Санкт-Петербург</li>
+              <li class="modal__cities-list-item">Нижний Новгород</li>
+            </ul>
+          </div>
+        </div>
+        <div class="modal__bottom">
+          <div class="modal__bottom-nocity">Тут нет моего города</div>
+          <div class="modal__bottom-buttons">
+            <button class="modal__button modal__button-cancel button button--primary button--outlined">Отменить</button>
+            <button class="modal__button modal__button-accept button button--primary">Выбрать</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Include Scripts -->
     @yield('page-scripts')
 
   </div>
+
+  
 </body>
 
 </html>
