@@ -4,7 +4,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(20, 20, 20, 0.40);
+    background: transparent;
+    transition: .3s background-color .3s ease;
+    pointer-events: none;
     &__in {
         position: absolute;
         top: 0;
@@ -17,14 +19,30 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        translate: 100% 0;
+        transition: translate .3s ease;
+        
     }
     &__closer {
         position: absolute;
         top: 28px;
         right: calc(100% + 28px);
         cursor: pointer;
-        // opacity: 0;
-        transform: translateX(-28px);
+        translate: 47px 0;
+    }
+    &.isOpened {
+        background: rgba(20, 20, 20, 0.40);
+        transition: background-color .3s ease;
+        pointer-events: all;
+    }
+    &.isOpened &__in {
+        translate: 0 0;
+        transition: .3s translate .3s ease;
+    }
+
+    &.isOpened &__in {
+        translate: 0 0;
+        transition: .3s translate .6s ease;
     }
     &__title {
         color: #121212;
