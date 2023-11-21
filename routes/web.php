@@ -9,6 +9,7 @@ use App\Http\Controllers\TagController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\OrganizerController;
 use App\Http\Controllers\JournalController;
+use App\Http\Controllers\ReviewController;
 
 
 /*
@@ -83,7 +84,7 @@ Route::group([
   Route::delete('/admin/organizers/{id}', [OrganizerController::class, 'destroy'])->name('admin-organizer-destroy');
 
 
-
+  Route::get('/admin/reviews', [ReviewController::class, 'index'])->name('admin-reviews');
 
   Route::post('/admin/journals/store', [JournalController::class, 'store'])->name('admin-journals-store');
   Route::get('/admin/journals', [JournalController::class, 'index'])->name('admin-journals');
