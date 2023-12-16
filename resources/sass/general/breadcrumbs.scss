@@ -1,0 +1,33 @@
+.general__page {
+    &-breadcrumbs {
+        padding-top: 18px;
+    }
+    &-breadcrumbs-in {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+    &-breadcrumbs-item {
+        color: #999;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%; /* 15.6px */
+        text-decoration: none;
+    } 
+    &-breadcrumbs-item {}
+    &-breadcrumbs-arrow {
+        display: block;
+        font-size: 0;
+        width: 16px;
+    }
+    &-description {
+        max-width: 954px;
+        color: #121212;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; /* 25.2px */
+        margin-bottom: 36px;
+    }
+}

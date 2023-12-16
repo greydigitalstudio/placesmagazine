@@ -87,10 +87,10 @@
     {
       "name": "Заявки",
       "icon": "menu-icon tf-icons ti ti-table",
-      "slug": "admin/",
+      "slug": "admin/reviews",
       "submenu": [
         {
-          "url": "admin/",
+          "url": "admin/reviews",
           "name": "Список",
           "slug": "new"
         }

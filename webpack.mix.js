@@ -134,6 +134,7 @@ mixAssetsDir('css/**/*.css', (src, dest) => mix.copy(src, dest));
 mix.js('resources/js/laravel-user-management.js', 'public/js/');
 mix.js('resources/js/event-create.js', 'public/js/');
 mix.js('resources/js/page-main.js', 'public/js/');
+mix.js('resources/js/page-event-single.js', 'public/js/');
 
 mix.copy('node_modules/@fortawesome/fontawesome-free/webfonts/*', 'public/assets/vendor/fonts/fontawesome');
 mix.copy('node_modules/katex/dist/fonts/*', 'public/assets/vendor/libs/quill/fonts');
