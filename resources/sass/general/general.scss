@@ -85,6 +85,28 @@ body {
         cursor: pointer;
     }
 }
+.glide {
+    &__arrow {
+        width: 56px;
+        height: 56px;
+        padding: 17px;
+        box-sizing: border-box;
+        border-radius: 50%;
+        background: #121212;
+        filter: drop-shadow(0px 10px 18px rgba(85, 104, 111, 0.55));
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%) translateX(-49px);
+        &--next {
+            right: 0;
+            left: auto;
+            transform: translateY(-50%) translateX(49px) rotate(180deg);
+        }
+    }
+}
 
 .button {
     &--circle {

@@ -48,14 +48,18 @@
             </div>
         </div>
         <div class="general__page-slider-top-right">
-            <div class="general__page-slider-top-point">
-                <div class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 19 19" fill="none">
-                        <path d="M14.812 5.70781C14.7384 5.6336 14.6509 5.57471 14.5544 5.53452C14.4579 5.49433 14.3544 5.47363 14.2499 5.47363C14.1454 5.47363 14.042 5.49433 13.9455 5.53452C13.849 5.57471 13.7615 5.6336 13.6879 5.70781L7.78994 11.6136L5.31202 9.12781C5.23561 9.05399 5.14541 8.99595 5.04656 8.957C4.94772 8.91805 4.84217 8.89894 4.73594 8.90078C4.62972 8.90262 4.52489 8.92536 4.42746 8.96771C4.33002 9.01006 4.24188 9.07119 4.16806 9.1476C4.09425 9.22401 4.03621 9.31421 3.99726 9.41306C3.9583 9.5119 3.9392 9.61745 3.94104 9.72368C3.94288 9.8299 3.96562 9.93473 4.00797 10.0322C4.05032 10.1296 4.11144 10.2177 4.18786 10.2916L7.22786 13.3316C7.30145 13.4058 7.38901 13.4647 7.48548 13.5048C7.58196 13.545 7.68543 13.5657 7.78994 13.5657C7.89445 13.5657 7.99792 13.545 8.0944 13.5048C8.19087 13.4647 8.27843 13.4058 8.35202 13.3316L14.812 6.87156C14.8924 6.79742 14.9565 6.70745 15.0004 6.6073C15.0442 6.50716 15.0669 6.39901 15.0669 6.28968C15.0669 6.18035 15.0442 6.07221 15.0004 5.97206C14.9565 5.87191 14.8924 5.78194 14.812 5.70781Z" fill="#414141"/>
-                    </svg>
+
+            @if (strtotime($event->endtime) > time())
+                <div class="general__page-slider-top-point">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 19 19" fill="none">
+                            <path d="M14.812 5.70781C14.7384 5.6336 14.6509 5.57471 14.5544 5.53452C14.4579 5.49433 14.3544 5.47363 14.2499 5.47363C14.1454 5.47363 14.042 5.49433 13.9455 5.53452C13.849 5.57471 13.7615 5.6336 13.6879 5.70781L7.78994 11.6136L5.31202 9.12781C5.23561 9.05399 5.14541 8.99595 5.04656 8.957C4.94772 8.91805 4.84217 8.89894 4.73594 8.90078C4.62972 8.90262 4.52489 8.92536 4.42746 8.96771C4.33002 9.01006 4.24188 9.07119 4.16806 9.1476C4.09425 9.22401 4.03621 9.31421 3.99726 9.41306C3.9583 9.5119 3.9392 9.61745 3.94104 9.72368C3.94288 9.8299 3.96562 9.93473 4.00797 10.0322C4.05032 10.1296 4.11144 10.2177 4.18786 10.2916L7.22786 13.3316C7.30145 13.4058 7.38901 13.4647 7.48548 13.5048C7.58196 13.545 7.68543 13.5657 7.78994 13.5657C7.89445 13.5657 7.99792 13.545 8.0944 13.5048C8.19087 13.4647 8.27843 13.4058 8.35202 13.3316L14.812 6.87156C14.8924 6.79742 14.9565 6.70745 15.0004 6.6073C15.0442 6.50716 15.0669 6.39901 15.0669 6.28968C15.0669 6.18035 15.0442 6.07221 15.0004 5.97206C14.9565 5.87191 14.8924 5.78194 14.812 5.70781Z" fill="#414141"/>
+                        </svg>
+                    </div>
+                    <div class="text">Активное событие</div>
                 </div>
-                <div class="text">Активное событие</div>
-            </div>
+            @endif
+            
             <div class="general__page-slider-top-point">
                 <div class="icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 19 19" fill="none">
@@ -72,11 +76,46 @@
     <div class="general__page-slider-images">
         <div class="general__page-slider-images-in general__page-slider-images-js glide">
             <div class="glide__track" data-glide-el="track">
-                <ul class="glide__slides">
-                  <li class="glide__slide">0</li>
-                  <li class="glide__slide">1</li>
-                  <li class="glide__slide">2</li>
-                </ul>
+                <div class="glide__slides">
+                  <div class="glide__slide general__page-slider-slide">
+                    <img src="https://place-hold.it/1272x584" width="100%" alt="image">
+                  </div>
+                  <div class="glide__slide general__page-slider-slide">
+                    <img src="https://place-hold.it/1272x584" width="100%" alt="image">
+                  </div>
+                  <div class="glide__slide general__page-slider-slide">
+                    <img src="https://place-hold.it/1272x584" width="100%" alt="image">
+                  </div>
+                  <div class="glide__slide general__page-slider-slide">
+                    <img src="https://place-hold.it/1272x584" width="100%" alt="image">
+                  </div>
+                </div>
+            </div>
+            <div data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--prev" data-glide-dir="<">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 22 22" fill="none">
+                        <g id="Arrow XL-line" clip-path="url(#clip0_2048_517)">
+                            <path id="Arrow 1" d="M1.29289 10.2929C0.90237 10.6834 0.90237 11.3166 1.29289 11.7071L7.65685 18.0711C8.04738 18.4616 8.68054 18.4616 9.07107 18.0711C9.46159 17.6805 9.46159 17.0474 9.07107 16.6569L3.41421 11L9.07107 5.34314C9.46159 4.95262 9.46159 4.31945 9.07107 3.92893C8.68054 3.53841 8.04738 3.53841 7.65686 3.92893L1.29289 10.2929ZM34 10L2 10L2 12L34 12L34 10Z" fill="white"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_2048_517">
+                                <rect width="22" height="22" fill="white" transform="translate(22 22) rotate(-180)"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </button>
+                <button class="glide__arrow glide__arrow--next" data-glide-dir=">">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 22 22" fill="none">
+                        <g id="Arrow XL-line" clip-path="url(#clip0_2048_517)">
+                            <path id="Arrow 1" d="M1.29289 10.2929C0.90237 10.6834 0.90237 11.3166 1.29289 11.7071L7.65685 18.0711C8.04738 18.4616 8.68054 18.4616 9.07107 18.0711C9.46159 17.6805 9.46159 17.0474 9.07107 16.6569L3.41421 11L9.07107 5.34314C9.46159 4.95262 9.46159 4.31945 9.07107 3.92893C8.68054 3.53841 8.04738 3.53841 7.65686 3.92893L1.29289 10.2929ZM34 10L2 10L2 12L34 12L34 10Z" fill="white"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_2048_517">
+                                <rect width="22" height="22" fill="white" transform="translate(22 22) rotate(-180)"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </button>
             </div>
         </div>
     </div>
